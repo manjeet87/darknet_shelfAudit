@@ -1,23 +1,8 @@
-*.o
-*.dSYM
-*.csv
-*.out
-*.png
-*.jpg
+
 *.pyc
-old/
-mnist/
-data/
-caffe/
-grasp/
 images/
-opencv/
-convnet/
-decaf/
-submission/
-cfg/
-darknet
-.fuse*
+retailo_allCat_backup/
+retailo_allCat_backup2/
 
 # OS Generated #
 .DS_Store*

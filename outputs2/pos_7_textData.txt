@@ -1,0 +1,132 @@
+MaggiSG: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+MaggiSR: 97%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+MaggiSR: 95%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+MaggiMG: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+MaggiMG: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+MaggiMG: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+MaggiMG: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+MaggiMG: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+MaggiMG: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+MaggiMG: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+MaggiMG: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+MaggiMG: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+MaggiMG: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+MaggiMG: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+MaggiMG: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+MaggiMG: 89%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=1
+
+MaggiMG: 71%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=1
+
+Heinz: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+Heinz: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+Heinz: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+Heinz: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+Heinz: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+Heinz: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+Heinz: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+Heinz: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+Heinz: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+Heinz: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+Heinz: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+Heinz: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+Heinz: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+Heinz: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+Heinz: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+Heinz: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+Heinz: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+Heinz: 99%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+Heinz: 99%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+Heinz: 65%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+MaggiMR: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+MaggiMR: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+MaggiMR: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+MaggiMR: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+MaggiMR: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+MaggiMR: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+MaggiMR: 68%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+

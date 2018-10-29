@@ -1,0 +1,135 @@
+MaggiSG: 100%
+Bounding Box: Left=0.882822, Top=0.486158, Right=0.928458, Bottom=0.561407
+
+MaggiSR: 99%
+Bounding Box: Left=0.790236, Top=0.481093, Right=0.842019, Bottom=0.565665
+
+MaggiSR: 99%
+Bounding Box: Left=0.741152, Top=0.481156, Right=0.796486, Bottom=0.563094
+
+MaggiMG: 100%
+Bounding Box: Left=0.277023, Top=0.574012, Right=0.337855, Bottom=0.693299
+
+MaggiMG: 100%
+Bounding Box: Left=0.301769, Top=0.159766, Right=0.372700, Bottom=0.298724
+
+MaggiMG: 100%
+Bounding Box: Left=0.338584, Top=0.582624, Right=0.400084, Bottom=0.695321
+
+MaggiMG: 100%
+Bounding Box: Left=0.403935, Top=0.583961, Right=0.466602, Bottom=0.698023
+
+MaggiMG: 100%
+Bounding Box: Left=0.183190, Top=0.321991, Right=0.249821, Bottom=0.436168
+
+MaggiMG: 100%
+Bounding Box: Left=0.231269, Top=0.167053, Right=0.297573, Bottom=0.299119
+
+MaggiMG: 100%
+Bounding Box: Left=0.389188, Top=0.321946, Right=0.456549, Bottom=0.440864
+
+MaggiMG: 100%
+Bounding Box: Left=0.316794, Top=0.322761, Right=0.383607, Bottom=0.439647
+
+MaggiMG: 100%
+Bounding Box: Left=0.472772, Top=0.583152, Right=0.533446, Bottom=0.701800
+
+MaggiMG: 100%
+Bounding Box: Left=0.251583, Top=0.324362, Right=0.315900, Bottom=0.436956
+
+MaggiMG: 100%
+Bounding Box: Left=0.155764, Top=0.171470, Right=0.220824, Bottom=0.299219
+
+MaggiMG: 100%
+Bounding Box: Left=0.373387, Top=0.161863, Right=0.446456, Bottom=0.296568
+
+MaggiMG: 100%
+Bounding Box: Left=0.385404, Top=0.731539, Right=0.446975, Bottom=0.853220
+
+MaggiMG: 100%
+Bounding Box: Left=0.321896, Top=0.726305, Right=0.385145, Bottom=0.847690
+
+MaggiMG: 100%
+Bounding Box: Left=0.450895, Top=0.735529, Right=0.520713, Bottom=0.853384
+
+MaggiMG: 99%
+Bounding Box: Left=0.269653, Top=0.720212, Right=0.323819, Bottom=0.830306
+
+Heinz: 100%
+Bounding Box: Left=0.860521, Top=0.154711, Right=0.917745, Bottom=0.298512
+
+Heinz: 100%
+Bounding Box: Left=0.733023, Top=0.158487, Right=0.794854, Bottom=0.296413
+
+Heinz: 100%
+Bounding Box: Left=0.795717, Top=0.158851, Right=0.857734, Bottom=0.294771
+
+Heinz: 100%
+Bounding Box: Left=0.615939, Top=0.163055, Right=0.675041, Bottom=0.293856
+
+Heinz: 100%
+Bounding Box: Left=0.814859, Top=0.000000, Right=0.878570, Bottom=0.126732
+
+Heinz: 100%
+Bounding Box: Left=0.731042, Top=0.317282, Right=0.786526, Bottom=0.447914
+
+Heinz: 100%
+Bounding Box: Left=0.751737, Top=0.000566, Right=0.813170, Bottom=0.125602
+
+Heinz: 100%
+Bounding Box: Left=0.691102, Top=0.001036, Right=0.749185, Bottom=0.124866
+
+Heinz: 100%
+Bounding Box: Left=0.672899, Top=0.318582, Right=0.729091, Bottom=0.446455
+
+Heinz: 100%
+Bounding Box: Left=0.629119, Top=0.001223, Right=0.688711, Bottom=0.127424
+
+Heinz: 100%
+Bounding Box: Left=0.672795, Top=0.160704, Right=0.732840, Bottom=0.296340
+
+Heinz: 100%
+Bounding Box: Left=0.882911, Top=0.000053, Right=0.946597, Bottom=0.125276
+
+Heinz: 100%
+Bounding Box: Left=0.564222, Top=0.000000, Right=0.626827, Bottom=0.131872
+
+Heinz: 100%
+Bounding Box: Left=0.787179, Top=0.317543, Right=0.844786, Bottom=0.447558
+
+Heinz: 100%
+Bounding Box: Left=0.914281, Top=0.155165, Right=0.957187, Bottom=0.294513
+
+Heinz: 100%
+Bounding Box: Left=0.556934, Top=0.162381, Right=0.613734, Bottom=0.295684
+
+Heinz: 99%
+Bounding Box: Left=0.842184, Top=0.318066, Right=0.904075, Bottom=0.445733
+
+Heinz: 98%
+Bounding Box: Left=0.615287, Top=0.319330, Right=0.671591, Bottom=0.445735
+
+Heinz: 97%
+Bounding Box: Left=0.943636, Top=0.000000, Right=0.998301, Bottom=0.110515
+
+MaggiMR: 100%
+Bounding Box: Left=0.446607, Top=0.162474, Right=0.501075, Bottom=0.297321
+
+MaggiMR: 100%
+Bounding Box: Left=0.502400, Top=0.163704, Right=0.556683, Bottom=0.295815
+
+MaggiMR: 100%
+Bounding Box: Left=0.563903, Top=0.319735, Right=0.616580, Bottom=0.446689
+
+MaggiMR: 100%
+Bounding Box: Left=0.508921, Top=0.000000, Right=0.564661, Bottom=0.135733
+
+MaggiMR: 100%
+Bounding Box: Left=0.509608, Top=0.319451, Right=0.564673, Bottom=0.446857
+
+MaggiMR: 100%
+Bounding Box: Left=0.454970, Top=0.320239, Right=0.506438, Bottom=0.445082
+
+MaggiMR: 99%
+Bounding Box: Left=0.447243, Top=0.000000, Right=0.503285, Bottom=0.137049
+

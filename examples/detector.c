@@ -1,4 +1,8 @@
 #include "darknet.h"
+#include<string.h>
+#include<dirent.h>
+#include<stdio.h>
+#include<unistd.h>
 
 static int coco_ids[] = {1,2,3,4,5,6,7,8,9,10,11,13,14,15,16,17,18,19,20,21,22,23,24,25,27,28,31,32,33,34,35,36,37,38,39,40,41,42,43,44,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,67,70,72,73,74,75,76,77,78,79,80,81,82,84,85,86,87,88,89,90};
 
@@ -135,7 +139,7 @@ void train_detector(char *datacfg, char *cfgfile, char *weightfile, int *gpus, i
             sprintf(buff, "%s/%s.backup", backup_directory, base);
             save_weights(net, buff);
         }
-        if(i%10000==0 || (i < 1000 && i%100 == 0)){
+        if(i%10000==0 || (i < 1000 && i%10 == 0)){
 #ifdef GPU
             if(ngpus != 1) sync_nets(nets, ngpus, 0);
 #endif
@@ -561,69 +565,195 @@ void validate_detector_recall(char *cfgfile, char *weightfile)
 
 void test_detector(char *datacfg, char *cfgfile, char *weightfile, char *filename, float thresh, float hier_thresh, char *outfile, int fullscreen)
 {
+    char input_image[100]= "/";
+    char output_dir[100] = "outputs";
+    
     list *options = read_data_cfg(datacfg);
-    char *name_list = option_find_str(options, "names", "data/names.list");
+    char *name_list = option_find_str(options, "names", "data2/retailo_All_Cat.names");
     char **names = get_labels(name_list);
 
     image **alphabet = load_alphabet();
     network *net = load_network(cfgfile, weightfile, 0);
+    
     set_batch_network(net, 1);
     srand(2222222);
     double time;
-    char buff[256];
-    char *input = buff;
     float nms=.45;
-    while(1){
-        if(filename){
-            strncpy(input, filename, 256);
-        } else {
-            printf("Enter Image Path: ");
-            fflush(stdout);
-            input = fgets(input, 256, stdin);
-            if(!input) return;
-            strtok(input, "\n");
+    struct dirent *infile2;
+    DIR *d;
+    d = opendir("inputs");
+
+    do{
+        //DIR *d;
+        struct dirent *infile;
+        if (d==NULL){
+            printf("Cannot Open Directory!!");
         }
-        image im = load_image_color(input,0,0);
-        image sized = letterbox_image(im, net->w, net->h);
-        //image sized = resize_image(im, net->w, net->h);
-        //image sized2 = resize_max(im, net->w);
-        //image sized = crop_image(sized2, -((net->w - sized2.w)/2), -((net->h - sized2.h)/2), net->w, net->h);
-        //resize_network(net, sized.w, sized.h);
-        layer l = net->layers[net->n-1];
+        
+        char file_name[256];
+        int status;
+        if (d)
+        {
+            //printf("inside d");
+            while ((infile = readdir(d)) != NULL)
+            {
+                //printf("\nReading 'file': %s", infile->d_name);
+                strcpy(input_image, "/");
+
+                if(strlen(infile->d_name)>3){
+
+                    char input_img_path[150] = " ";
+                    char input_dir_buff[150] = "inputs";
+                    
+                    
+                    //Building Input Image Path*************************** 
+                    strcat(input_image,infile->d_name);
+                    strcpy(input_img_path,input_dir_buff);
+                    strcat(input_img_path,input_image);
+
+                    printf("\n **Input dirbuff: %s", input_dir_buff);
+                    printf("\n ****Input img path: %s", input_img_path);
+                    //****************************************************/
+
+                    //Building Output Image Path***************************
+                    char outputfname_p1[150]; 
+                    char outputfname_p2[] =  "_processed.jpg"; //Not adding '.jpg' as save_image() function automatically add this extension
+                    char output_img_path[150] = " ";
+                   
+                    strcpy(outputfname_p1,output_dir);
+                    strcat(outputfname_p1,strtok(input_image, "."));
+                    strcat(outputfname_p1,outputfname_p2);
+                    strcpy(output_img_path,outputfname_p1);
+                    //*****************************************************/
+                   
+                    ////Building Output text file Path*********************
+                    char output_text_p1[150] = " ";
+                    char output_text_p2[] = "_textData.txt";
+                    char output_text_path[150] = " ";
+                    
+                    strcpy(output_text_p1,output_dir);
+                    strcat(output_text_p1,strtok(input_image, "."));
+                    strcat(output_text_p1,output_text_p2);
+                    strcpy(output_text_path, output_text_p1);
+                    //******************************************************/
+
+                    //Printing All Generated paths**************************
+                    printf("\nInput Image path : %s",input_img_path);
+                    printf("\nOutput Image path : %s.jpg",output_img_path);
+                    printf("\nOutput Text path : %s",output_text_path);
+                    //******************************************************/
 
 
-        float *X = sized.data;
-        time=what_time_is_it_now();
-        network_predict(net, X);
-        printf("%s: Predicted in %f seconds.\n", input, what_time_is_it_now()-time);
-        int nboxes = 0;
-        detection *dets = get_network_boxes(net, im.w, im.h, thresh, hier_thresh, 0, 1, &nboxes);
-        //printf("%d\n", nboxes);
-        //if (nms) do_nms_obj(boxes, probs, l.w*l.h*l.n, l.classes, nms);
-        if (nms) do_nms_sort(dets, nboxes, l.classes, nms);
-        draw_detections(im, dets, nboxes, thresh, names, alphabet, l.classes);
-        free_detections(dets, nboxes);
-        if(outfile){
-            save_image(im, outfile);
-        }
-        else{
-            save_image(im, "predictions");
-#ifdef OPENCV
-            cvNamedWindow("predictions", CV_WINDOW_NORMAL); 
-            if(fullscreen){
-                cvSetWindowProperty("predictions", CV_WND_PROP_FULLSCREEN, CV_WINDOW_FULLSCREEN);
+                    //Creating File pointer for creating and writing text file
+                    FILE *ptr;   
+                    ptr = fopen(output_text_path, "w");
+                    sleep(1);
+	                
+
+                    image im = load_image_color(input_img_path,0,0);
+                    image sized = letterbox_image(im, net->w, net->h);
+                    //image sized = resize_image(im, net->w, net->h);
+                    //image sized2 = resize_max(im, net->w);
+                    //image sized = crop_image(sized2, -((net->w - sized2.w)/2), -((net->h - sized2.h)/2), net->w, net->h);
+                    //resize_network(net, sized.w, sized.h);
+                    printf("\n Image Loaded!");
+                    layer l = net->layers[net->n-1];
+
+
+                    float *X = sized.data;
+                    time=what_time_is_it_now();
+                    network_predict(net, X);
+                    printf("\nPredicted in %f seconds.\n", what_time_is_it_now()-time);
+                    int nboxes = 0;
+                    detection *dets = get_network_boxes(net, im.w, im.h, thresh, hier_thresh, 0, 1, &nboxes);
+                    //printf("%d\n", nboxes);
+                    //if (nms) do_nms_obj(boxes, probs, l.w*l.h*l.n, l.classes, nms);
+                    if (nms) do_nms_sort(dets, nboxes, l.classes, nms);
+                    draw_detections(im, dets, nboxes, thresh, names, alphabet, l.classes);
+
+                    // Outputting the co-ordinates of bounding box to a file.
+                    int k,m;
+	                int classes = l.classes;
+                    for(k = 0; k < nboxes; ++k){
+                        char labelstr[4096] = {0};
+                        int class = -1;
+                        for(m = 0; m < classes; ++m){
+                            if (dets[k].prob[m] > thresh){
+                                if (class < 0) {
+                                    strcat(labelstr, names[m]);
+                                    class = m;
+                                } else {
+                                    strcat(labelstr, ", ");
+                                    strcat(labelstr, names[m]);
+                                }
+                         //printf("%s: %.0f%%\n", names[j], dets[i].prob[j]*100);
+                        
+		                fprintf(ptr, "%s: %.0f%%\n", names[m], dets[k].prob[m]*100);
+                            }
+                        }
+
+                        if(class >= 0){
+                            box b = dets[k].bbox;
+            	            //printf("%f %f %f %f\n", b.x, b.y, b.w, b.h);
+
+            	            float left  = (b.x-b.w/2.);
+            	            float right = (b.x+b.w/2.);
+            	            float top   = (b.y-b.h/2.);
+            	            float bot   = (b.y+b.h/2.);
+
+            	            if(left < 0) left = 0;
+            	            if(right > im.w-1) right = 1;
+            	            if(top < 0) top = 0;
+            	            if(bot > im.h-1) bot = 1;
+	    	                //printf("Bounding Box: Left=%d, Top=%d, Right=%d, Bottom=%d\n", left, top, right, bot);
+                        
+	                        fprintf(ptr, "Bounding Box: Left=%f, Top=%f, Right=%f, Bottom=%f\n\n", left, top, right, bot);
+                            
+	    	            }
+
+	                }
+                    fclose(ptr);
+                    free_detections(dets, nboxes);
+                    save_image(im, output_img_path);
+//                    if(outfile){
+//                        save_image(im, outfile);
+//                    }
+//
+//                    else{
+//                        //printf("\n OutIMG : %s.jpg",output_img_path);
+//                        save_image(im, output_img_path);
+                        
+                        #ifdef OPENCV
+                        //cvNamedWindow(output_file, CV_WINDOW_NORMAL); 
+                        //if(fullscreen){
+                        //    cvSetWindowProperty(output_file, CV_WND_PROP_FULLSCREEN, CV_WINDOW_FULLSCREEN);
+                        //}
+                        //show_image(im, output_file);
+                        //cvWaitKey(0);
+                        //cvDestroyAllWindows();
+
+                        #endif
+                    //}
+
+                    strcpy(file_name, input_img_path);
+                    //printf("\n%s", file_name);
+                    status = remove(file_name);
+                    //printf("\nStatus: %d", status);
+                    
+                    free_image(im);
+                    free_image(sized);
+                    //if (filename) break;
+                }
+
+                    
+                
+              }
             }
-            show_image(im, "predictions");
-            cvWaitKey(0);
-            cvDestroyAllWindows();
-#endif
-        }
-
-        free_image(im);
-        free_image(sized);
-        if (filename) break;
+            
+            closedir(d);
+        }while ((infile2 = readdir(d)) != NULL);
     }
-}
+
 
 /*
 void censor_detector(char *datacfg, char *cfgfile, char *weightfile, int cam_index, const char *filename, int class, float thresh, int skip)

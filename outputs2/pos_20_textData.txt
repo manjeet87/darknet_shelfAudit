@@ -1,0 +1,102 @@
+MaggiMG: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+MaggiMG: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+MaggiMG: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+MaggiMG: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+MaggiMG: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+MaggiMG: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+MaggiMG: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+MaggiMG: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+MaggiMG: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+MaggiMG: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+MaggiMG: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+MaggiMG: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+MaggiMG: 97%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=1
+
+MaggiMG: 95%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+MaggiMG: 88%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=1
+
+MaggiMG: 86%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+Heinz: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+Heinz: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+Heinz: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+Heinz: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+Heinz: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+Heinz: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+Heinz: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+Heinz: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+Heinz: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+Heinz: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+Heinz: 99%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+MaggiMR: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+MaggiMR: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+MaggiMR: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+MaggiMR: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+MaggiMR: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+MaggiMR: 100%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+
+MaggiMR: 94%
+Bounding Box: Left=0, Top=0, Right=0, Bottom=0
+

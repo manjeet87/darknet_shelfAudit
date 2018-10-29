@@ -1,0 +1,5 @@
+classes= 1
+train  = data2/labels_list.txt
+valid  = data2/labels_list.txt
+names = data2/retailo_maggi_medium.names
+backup = retailo_backup
