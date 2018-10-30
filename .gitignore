@@ -1,5 +1,8 @@
 
+*.json
 *.pyc
+input_main/
+output_main/
 images/
 retailo_allCat_backup/
 retailo_allCat_backup2/

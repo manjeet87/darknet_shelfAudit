@@ -4,13 +4,13 @@ from os.path import expanduser
 import shutil
 import time
 
-dl_path = 'retailo_allCat_backup'
-test_command0 = './darknet detect cfg/yolov3_SosAllCat.cfg retailo_allCat_backup/'
+dl_path = 'retailo_allCat_backup2'
+test_command0 = './darknet detect cfg/yolov3_SosAllCat.cfg retailo_allCat_backup2/'
 home = expanduser('~')
 input_main = 'input_main'
 input_tst = 'D:\postgre training\shelf_object\inputs'
 output_tst = 'D:\postgre training\shelf_object\outputs'
-output_main = 'output2'
+output_main = 'output_main'
 def main():
 
     print("Hi!!")
@@ -40,9 +40,11 @@ def main():
             t = t + 0.000001
         print(t, "\n")
         if len(glob.glob('outputs/*.jpg')) == l:
+            if dir_name in os.listdir('output_main'):
+                shutil.rmtree('output_main/'+dir_name)    ## os.removedirs, os.rmdir delete only empty directories
             shutil.copytree('outputs','output_main/'+dir_name)
             shutil.rmtree('outputs')
-            os.mkdir('outputs')
+            os.mkdir('outputs')     ## os.removedirs, os.rmdir delete only empty directories
 
 if __name__ == '__main__':
     main()

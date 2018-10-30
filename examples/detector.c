@@ -617,7 +617,7 @@ void test_detector(char *datacfg, char *cfgfile, char *weightfile, char *filenam
 
                     //Building Output Image Path***************************
                     char outputfname_p1[150]; 
-                    char outputfname_p2[] =  "_processed.jpg"; //Not adding '.jpg' as save_image() function automatically add this extension
+                    char outputfname_p2[] =  "_processed"; //Not adding '.jpg' as save_image() function automatically add this extension
                     char output_img_path[150] = " ";
                    
                     strcpy(outputfname_p1,output_dir);
@@ -750,8 +750,9 @@ void test_detector(char *datacfg, char *cfgfile, char *weightfile, char *filenam
               }
             }
             
-            closedir(d);
-        }while ((infile2 = readdir(d)) != NULL);
+
+        }while (readdir(d) != NULL);
+        closedir(d);
     }
 
 
