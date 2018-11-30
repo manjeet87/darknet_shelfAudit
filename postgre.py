@@ -153,7 +153,7 @@ while(True):
                 blob = bucket.blob('unprocessed/'+ os.path.basename(file_path))
                 blob.upload_from_filename(file_path)
                 image_new_url = blob.public_url
-                image_id2 = file.split('_')[0]
+                image_id2 = file.split('_unprocessed')[0]
                 flag = 'Found'
                 textfileName = '{}_textData.txt'.format(image_id2)
                 textfilePath = os.path.join(output_path,textfileName)
